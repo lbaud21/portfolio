@@ -1,9 +1,9 @@
-import Home from "./pages";
+import Dashboard from "./pages";
 
 function App() {
   return (
     <div className="App-wrapper">
-      <Home />
+      <Dashboard />
     </div>
   );
 }

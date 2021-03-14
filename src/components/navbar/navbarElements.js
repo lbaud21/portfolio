@@ -10,6 +10,7 @@ export const Nav = styled.nav`
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 999;
 `;
 
 export const NavContainer = styled.div`
@@ -21,7 +22,7 @@ export const NavContainer = styled.div`
   height: 100%;
 `;
 
-export const NavLogo = styled.div`
+export const NavLogo = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,9 +65,15 @@ export const NavLink = styled(Link)`
   height: 100%;
   display: flex;
   align-items: center;
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
 
-  &:active {
+  &.active {
     border-bottom: 3px solid red;
+  }
+  &:hover {
+    transform: scale(1.3);
+    color: red;
   }
 `;
 

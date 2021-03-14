@@ -14,22 +14,65 @@ const Navbar = ({ toggle }) => {
   return (
     <Nav>
       <NavContainer>
-        <NavLogo>Portfolio</NavLogo>
+        <NavLogo to="home" smooth="easeOutQuad" duration={1000} offset={-100}>
+          Portfolio
+        </NavLogo>
         <NavMenu>
           <NavElement>
-            <NavLink to="home">Home</NavLink>
+            <NavLink
+              to="home"
+              smooth="easeOutQuad"
+              duration={1000}
+              offset={-100}
+              activeClass="active"
+              spy={true}
+            >
+              Home
+            </NavLink>
           </NavElement>
           <NavElement>
-            <NavLink to="about-me">About me</NavLink>
+            <NavLink
+              to="about-me"
+              smooth="easeOutQuad"
+              duration={1000}
+              activeClass="active"
+              spy={true}
+            >
+              About me
+            </NavLink>
           </NavElement>
           <NavElement>
-            <NavLink to="my-stack">My stack</NavLink>
+            <NavLink
+              to="my-stack"
+              smooth="easeOutQuad"
+              duration={1000}
+              activeClass="active"
+              spy={true}
+            >
+              My stack
+            </NavLink>
           </NavElement>
           <NavElement>
-            <NavLink to="projects">Projects</NavLink>
+            <NavLink
+              to="projects"
+              smooth="easeOutQuad"
+              duration={1000}
+              activeClass="active"
+              spy={true}
+            >
+              Projects
+            </NavLink>
           </NavElement>
           <NavElement>
-            <NavLink to="contacts">Contact</NavLink>
+            <NavLink
+              to="contacts"
+              smooth="easeOutQuad"
+              duration={1000}
+              activeClass="active"
+              spy={true}
+            >
+              Contact
+            </NavLink>
           </NavElement>
         </NavMenu>
 

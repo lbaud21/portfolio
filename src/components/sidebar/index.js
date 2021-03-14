@@ -16,20 +16,30 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
 
       <SidebarMenu>
-        <SidebarElement>
-          <SidebarLink to="home">Home</SidebarLink>
+        <SidebarElement isOpen={isOpen} delay="0.1s">
+          <SidebarLink to="home" onClick={toggle}>
+            Home
+          </SidebarLink>
         </SidebarElement>
-        <SidebarElement>
-          <SidebarLink to="about-me">About me</SidebarLink>
+        <SidebarElement isOpen={isOpen} delay="0.2s">
+          <SidebarLink to="about-me" onClick={toggle}>
+            About me
+          </SidebarLink>
         </SidebarElement>
-        <SidebarElement>
-          <SidebarLink to="my-stack">My stack</SidebarLink>
+        <SidebarElement isOpen={isOpen} delay="0.3s">
+          <SidebarLink to="my-stack" onClick={toggle}>
+            My stack
+          </SidebarLink>
         </SidebarElement>
-        <SidebarElement>
-          <SidebarLink to="projects">Projects</SidebarLink>
+        <SidebarElement isOpen={isOpen} delay="0.4s">
+          <SidebarLink to="projects" onClick={toggle}>
+            Projects
+          </SidebarLink>
         </SidebarElement>
-        <SidebarElement>
-          <SidebarLink to="contacts">Contact</SidebarLink>
+        <SidebarElement isOpen={isOpen} delay="0.5s">
+          <SidebarLink to="contacts" onClick={toggle}>
+            Contact
+          </SidebarLink>
         </SidebarElement>
       </SidebarMenu>
     </SidebarContainer>

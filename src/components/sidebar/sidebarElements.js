@@ -24,11 +24,6 @@ export const Icon = styled.div`
 
 export const CloseIcon = styled(FaTimes)`
   color: white;
-  transition: transform 0.6s ease-in-out;
-
-  &:hover {
-    transform: rotate(360deg) scale(1.5);
-  }
 `;
 
 export const SidebarMenu = styled.ul`
@@ -47,17 +42,13 @@ export const SidebarElement = styled.li`
   align-items: center;
   justify-content: center;
   margin: 1em 0;
+  transition: 1s ease-in;
+  transition-delay: ${({ delay }) => delay};
+  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
 `;
 
 export const SidebarLink = styled(Link)`
   color: white;
   font-size: 3em;
   cursor: pointer;
-  transition: transform 0.5s;
-  will-change: transform;
-
-  &:hover {
-    color: red;
-    transform: scale(1.2);
-  }
 `;
