@@ -1,26 +1,16 @@
 import React from "react";
-import {
-  AboutMeContainer,
-  GridContainer,
-  DescriptionContainer,
-  QualitiesContainer,
-  WhatILikeContainer,
-  DescriptionTitle,
-} from "./aboutMeElements";
+import { AboutMeSection, AboutMeContainer } from "./aboutMeElements";
+import { Stack } from "./stack";
+import { Description } from "./description";
 
 const AboutMe = () => {
   return (
-    <AboutMeContainer backgroundColor="white" id="about-me">
-      <GridContainer>
-        <DescriptionContainer>
-          <DescriptionTitle>
-            My name is Lucas and I'm a full stack developer
-          </DescriptionTitle>
-        </DescriptionContainer>
-        <QualitiesContainer></QualitiesContainer>
-        <WhatILikeContainer></WhatILikeContainer>
-      </GridContainer>
-    </AboutMeContainer>
+    <AboutMeSection backgroundColor="white" id="about-me">
+      <AboutMeContainer>
+        <Description />
+        <Stack />
+      </AboutMeContainer>
+    </AboutMeSection>
   );
 };
 

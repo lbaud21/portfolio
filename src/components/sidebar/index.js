@@ -26,11 +26,6 @@ const Sidebar = ({ isOpen, toggle }) => {
             About me
           </SidebarLink>
         </SidebarElement>
-        <SidebarElement isOpen={isOpen} delay="0.3s">
-          <SidebarLink to="my-stack" onClick={toggle}>
-            My stack
-          </SidebarLink>
-        </SidebarElement>
         <SidebarElement isOpen={isOpen} delay="0.4s">
           <SidebarLink to="projects" onClick={toggle}>
             Projects

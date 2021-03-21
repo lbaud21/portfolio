@@ -43,17 +43,6 @@ const Navbar = ({ toggle }) => {
           </NavElement>
           <NavElement>
             <NavLink
-              to="my-stack"
-              smooth="easeOutQuad"
-              duration={1000}
-              activeClass="active"
-              spy={true}
-            >
-              My stack
-            </NavLink>
-          </NavElement>
-          <NavElement>
-            <NavLink
               to="projects"
               smooth="easeOutQuad"
               duration={1000}
