@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
 import Hero from "../components/hero";
 import AboutMe from "../components/aboutMe";
+import Projects from "../components/projects";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,7 @@ const Dashboard = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Hero />
       <AboutMe />
+      <Projects />
     </>
   );
 };
