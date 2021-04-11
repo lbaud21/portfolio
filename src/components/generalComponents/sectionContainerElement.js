@@ -5,4 +5,5 @@ export const SectionContainer = styled.section`
   background-color: ${(props) => props.backgroundColor};
   height: 90vh;
   width: 100%;
+  overflow-x: hidden;
 `;

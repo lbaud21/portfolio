@@ -14,6 +14,7 @@ const Projects = () => {
       <ProjectContainer>
         {projectsNames.map((project) => (
           <ProjectItemWrapper
+            key={project}
             backgroundImage={`${process.env.PUBLIC_URL}/images/projects/${project}.jpg`}
           >
             <ProjectItemTitle>{project}</ProjectItemTitle>

@@ -4,16 +4,11 @@ import { SectionContainer } from "../generalComponents/sectionContainerElement";
 export const HeroContainer = styled(SectionContainer)``;
 
 export const HeroBackground = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
-`;
-
-export const HeroVideo = styled.video`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  -o-object-fit: cover;
-  background: #232a34;
+  background: black;
+  overflow: hidden;
 `;
 
 export const HeroHeader = styled.header`
