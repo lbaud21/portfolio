@@ -35,7 +35,7 @@ const Navbar = ({ toggle }) => {
               to="about-me"
               smooth="easeOutQuad"
               duration={1000}
-              offset={-100}
+              offset={-70}
               activeClass="active"
               spy={true}
             >
@@ -47,7 +47,7 @@ const Navbar = ({ toggle }) => {
               to="projects"
               smooth="easeOutQuad"
               duration={1000}
-              offset={-100}
+              offset={-70}
               activeClass="active"
               spy={true}
             >
@@ -59,7 +59,7 @@ const Navbar = ({ toggle }) => {
               to="contacts"
               smooth="easeOutQuad"
               duration={1000}
-              offset={-100}
+              offset={-70}
               activeClass="active"
               spy={true}
             >

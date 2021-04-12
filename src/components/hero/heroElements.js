@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { SectionContainer } from "../generalComponents/sectionContainerElement";
 
-export const HeroContainer = styled(SectionContainer)``;
+export const HeroContainer = styled(SectionContainer)`
+  overflow: hidden;
+`;
 
 export const HeroBackground = styled.div`
   position: relative;

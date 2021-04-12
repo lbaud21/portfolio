@@ -10,7 +10,7 @@ const projectsNames = ["Pokedex", "Message-app", "Social-network"];
 
 const Projects = () => {
   return (
-    <ProjectSection backgroundColor="black ">
+    <ProjectSection id="projects" backgroundColor="black">
       <ProjectContainer>
         {projectsNames.map((project) => (
           <ProjectItemWrapper
