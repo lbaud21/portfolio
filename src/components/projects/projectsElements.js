@@ -30,7 +30,6 @@ export const ProjectItemWrapper = styled.div`
   background-size: cover;
   opacity: 0.7;
   transition: transform 0.5s ease;
-  will-change: transform;
 
   &:after {
     content: "";
@@ -44,7 +43,7 @@ export const ProjectItemWrapper = styled.div`
     transform: scale(1.1);
     & > p {
       opacity: 1;
-      top: 5%;
+      transform: translateY(100%);
       background-color: black;
     }
   }
@@ -58,5 +57,6 @@ export const ProjectItemTitle = styled.p`
   opacity: 0;
   position: absolute;
   top: -10%;
+  will-change: transform, opacity;
   transition: 0.5s ease-out;
 `;
