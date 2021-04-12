@@ -7,8 +7,6 @@ export const AsteroidContainer = styled.div`
   animation: ${(props) =>
     `translate${props.number} ${props.time}ms linear infinite`};
   animation-delay: ${(props) => `${props.number * props.time}ms`};
-  will-change: transform;
-
   background: transparent;
   @keyframes ${(props) => `translate${props.number}`} {
     0% {
@@ -28,7 +26,6 @@ export const AsteroidElement = styled.img`
   animation: ${(props) =>
     `spin${props.number} ${props.time}ms linear infinite`};
   animation-delay: ${(props) => `${props.number * props.time}ms`};
-  will-change: transform;
   background-color: transparent;
   z-index: ${(props) => props.number};
   @keyframes ${(props) => `spin${props.number}`} {

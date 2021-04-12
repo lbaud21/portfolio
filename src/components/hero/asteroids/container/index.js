@@ -9,7 +9,11 @@ const Asteroids = ({ number }) => {
       <Asteroid
         key={i}
         number={i}
-        time={Math.floor(Math.random() * 6000) + 2000}
+        time={
+          Math.random < 0.25
+            ? Math.floor(Math.random() * 7000) + 5000
+            : Math.floor(Math.random() * 4000) + 1500
+        }
       />
     );
   }
