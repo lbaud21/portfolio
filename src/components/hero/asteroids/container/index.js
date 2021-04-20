@@ -11,8 +11,8 @@ const Asteroids = ({ number }) => {
         number={i}
         time={
           Math.random < 0.25
-            ? Math.floor(Math.random() * 7000) + 5000
-            : Math.floor(Math.random() * 4000) + 1500
+            ? Math.floor(Math.random() * 3000) + 1500
+            : Math.floor(Math.random() * 7000) + 5000
         }
       />
     );

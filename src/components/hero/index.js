@@ -6,10 +6,12 @@ import {
   HeroHeader,
 } from "./heroElements";
 import Asteroids from "./asteroids/container";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const HeroSection = () => {
+  const { heroSectionRef, heroVisible } = useIntersectionObserver();
   return (
-    <HeroContainer backgroundColor="black" id="home">
+    <HeroContainer ref={heroSectionRef} backgroundColor="black" id="home">
       <HeroBackground>
         <Asteroids number={4} />
       </HeroBackground>

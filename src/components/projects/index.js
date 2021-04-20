@@ -5,12 +5,19 @@ import {
   ProjectItemWrapper,
   ProjectItemTitle,
 } from "./projectsElements";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const projectsNames = ["Pokedex", "Message-app", "Social-network"];
 
 const Projects = () => {
+  const { projectsSectionRef, projectsVisible } = useIntersectionObserver();
+
   return (
-    <ProjectSection id="projects" backgroundColor="black">
+    <ProjectSection
+      id="projects"
+      ref={projectsSectionRef}
+      backgroundColor="black"
+    >
       <ProjectContainer>
         {projectsNames.map((project) => (
           <ProjectItemWrapper

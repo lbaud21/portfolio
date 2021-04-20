@@ -4,9 +4,11 @@ import Sidebar from "../components/sidebar";
 import Hero from "../components/hero";
 import AboutMe from "../components/aboutMe";
 import Projects from "../components/projects";
+import Contact from "../components/contact";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -18,6 +20,7 @@ const Dashboard = () => {
       <Hero />
       <AboutMe />
       <Projects />
+      <Contact />
     </>
   );
 };

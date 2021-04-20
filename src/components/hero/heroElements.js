@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SectionContainer } from "../generalComponents/sectionContainerElement";
+import { OrbitronPolice } from "../generalComponents/police";
 
 export const HeroContainer = styled(SectionContainer)`
   overflow: hidden;
@@ -199,11 +200,12 @@ export const HeroHeader = styled.header`
 `;
 
 export const HeroTitle = styled.h1`
+  color: red;
+  font-family: ${OrbitronPolice};
   padding: 0.5em;
   background-color: black;
   border-radius: 0.5em;
   border: white solid 1.5px;
-  color: red;
   font-size: 3em;
   font-weight: bold;
   text-align: center;

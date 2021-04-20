@@ -35,7 +35,7 @@ const Navbar = ({ toggle }) => {
               to="about-me"
               smooth="easeOutQuad"
               duration={1000}
-              offset={-70}
+              offset={-80}
               activeClass="active"
               spy={true}
             >
@@ -47,7 +47,7 @@ const Navbar = ({ toggle }) => {
               to="projects"
               smooth="easeOutQuad"
               duration={1000}
-              offset={-70}
+              offset={-80}
               activeClass="active"
               spy={true}
             >
@@ -56,10 +56,10 @@ const Navbar = ({ toggle }) => {
           </NavElement>
           <NavElement>
             <NavLink
-              to="contacts"
+              to="contact"
               smooth="easeOutQuad"
               duration={1000}
-              offset={-70}
+              offset={-80}
               activeClass="active"
               spy={true}
             >
