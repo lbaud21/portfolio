@@ -7,10 +7,11 @@ const Envelope = () => {
   return (
     <>
       <div className="envelope-wrapper">
-        <div
+        <a
           onClick={() => setOpen(!open)}
           id="envelope"
           className={open ? "open" : "close"}
+          href="mailto:lucas.baudino@outlook.fr"
         >
           <div className="front flap"></div>
           <div className="front pocket"></div>
@@ -25,7 +26,7 @@ const Envelope = () => {
             <div className="heart a2"></div>
             <div className="heart a3"></div>
           </div>
-        </div>
+        </a>
       </div>
     </>
   );

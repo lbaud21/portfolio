@@ -11,6 +11,7 @@ $heart-width: 50px;
 
 #envelope {
   position: relative;
+  display: block;
   width: $env-width;
   height: $env-height;
   border-bottom-left-radius: $env-border-radius;
