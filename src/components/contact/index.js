@@ -4,11 +4,13 @@ import {
   ContactMeTextLeft,
   ContactMeTextRight,
 } from "./contactElements";
-
+import { useSectionRef } from "../../contexts/refContext";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const Contact = () => {
-  const { contactSectionRef, contactMeVisible } = useIntersectionObserver();
+  const { contactSectionRef } = useSectionRef();
+
+  const visible = useIntersectionObserver(contactSectionRef);
 
   return (
     <ContactMeSection
@@ -17,10 +19,10 @@ const Contact = () => {
       id="contact"
     >
       <ContactMeContainer>
-        <ContactMeTextLeft visible={contactMeVisible}>
+        <ContactMeTextLeft visible={visible}>
           Want to work with me?
         </ContactMeTextLeft>
-        <ContactMeTextRight visible={contactMeVisible}>
+        <ContactMeTextRight visible={visible}>
           Send me an email
         </ContactMeTextRight>
       </ContactMeContainer>

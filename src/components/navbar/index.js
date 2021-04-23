@@ -9,8 +9,14 @@ import {
   MobileIcon,
 } from "./navbarElements";
 import { FaBars } from "react-icons/fa";
+import useNavObserver from "../../hooks/useNavObserver";
+import { useSectionRef } from "../../contexts/refContext";
+
+const sectionsNames = ["Home", "About me", "Projects", "Contact"];
 
 const Navbar = ({ toggle }) => {
+  const refs = useSectionRef();
+  const activeIndex = useNavObserver(Object.values(refs));
   return (
     <Nav>
       <NavContainer>
@@ -18,54 +24,13 @@ const Navbar = ({ toggle }) => {
           Portfolio
         </NavLogo>
         <NavMenu>
-          <NavElement>
-            <NavLink
-              to="home"
-              smooth="easeOutQuad"
-              duration={1000}
-              offset={-100}
-              activeClass="active"
-              spy={true}
-            >
-              Home
-            </NavLink>
-          </NavElement>
-          <NavElement>
-            <NavLink
-              to="about-me"
-              smooth="easeOutQuad"
-              duration={1000}
-              offset={-80}
-              activeClass="active"
-              spy={true}
-            >
-              About me
-            </NavLink>
-          </NavElement>
-          <NavElement>
-            <NavLink
-              to="projects"
-              smooth="easeOutQuad"
-              duration={1000}
-              offset={-80}
-              activeClass="active"
-              spy={true}
-            >
-              Projects
-            </NavLink>
-          </NavElement>
-          <NavElement>
-            <NavLink
-              to="contact"
-              smooth="easeOutQuad"
-              duration={1000}
-              offset={-80}
-              activeClass="active"
-              spy={true}
-            >
-              Contact
-            </NavLink>
-          </NavElement>
+          {sectionsNames.map((sectionName, index) => (
+            <NavElement key={sectionName}>
+              <NavLink active={index === activeIndex ? true : false}>
+                {sectionName}
+              </NavLink>
+            </NavElement>
+          ))}
         </NavMenu>
 
         <MobileIcon>

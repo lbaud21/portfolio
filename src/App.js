@@ -1,9 +1,12 @@
 import Dashboard from "./pages";
+import { SectionRefProvider } from "./contexts/refContext";
 
 function App() {
   return (
     <div className="App-wrapper">
-      <Dashboard />
+      <SectionRefProvider>
+        <Dashboard />
+      </SectionRefProvider>
     </div>
   );
 }

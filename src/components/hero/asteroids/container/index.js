@@ -21,4 +21,4 @@ const Asteroids = ({ number }) => {
   return <>{asteroidsList}</>;
 };
 
-export default Asteroids;
+export default React.memo(Asteroids);

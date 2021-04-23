@@ -2,11 +2,10 @@ import React from "react";
 import { AboutMeSection, AboutMeContainer } from "./aboutMeElements";
 import { Stack } from "./stack";
 import { Description } from "./description";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import { useSectionRef } from "../../contexts/refContext";
 
 const AboutMe = () => {
-  const { aboutMeSectionRef, aboutMeVisible } = useIntersectionObserver();
-
+  const { aboutMeSectionRef } = useSectionRef();
   return (
     <AboutMeSection
       ref={aboutMeSectionRef}

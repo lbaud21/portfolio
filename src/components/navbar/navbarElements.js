@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 export const Nav = styled.nav`
   background: #000;
   width: 100%;
-  height: 80px;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ export const NavElement = styled.li`
     margin-right: 0;
   }
 `;
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   color: white;
   font-size: 1.2em;
   text-decoration: none;
@@ -67,10 +67,8 @@ export const NavLink = styled(Link)`
   align-items: center;
   transition: transform 0.2s ease-in-out;
   will-change: transform;
+  border-bottom: ${({ active }) => (active ? "3px solid red" : "none")};
 
-  &.active {
-    border-bottom: 3px solid red;
-  }
   &:hover {
     transform: scale(1.3);
     color: red;
