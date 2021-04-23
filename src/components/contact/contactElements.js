@@ -4,6 +4,7 @@ import { OrbitronPolice } from "../generalComponents/police";
 
 export const ContactMeSection = styled(SectionContainer)`
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 `;

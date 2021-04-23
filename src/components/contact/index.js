@@ -6,6 +6,7 @@ import {
 } from "./contactElements";
 import { useSectionRef } from "../../contexts/refContext";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import Envelope from "./envelope/Envelope";
 
 const Contact = () => {
   const { contactSectionRef } = useSectionRef();
@@ -26,6 +27,7 @@ const Contact = () => {
           Send me an email
         </ContactMeTextRight>
       </ContactMeContainer>
+      <Envelope />
     </ContactMeSection>
   );
 };

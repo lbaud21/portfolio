@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-scroll";
 
 export const Nav = styled.nav`
   background: #000;
@@ -22,7 +21,7 @@ export const NavContainer = styled.div`
   height: 100%;
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
