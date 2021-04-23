@@ -5,7 +5,6 @@ import {
   ProjectItemWrapper,
   ProjectItemTitle,
 } from "./projectsElements";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { useSectionRef } from "../../contexts/refContext";
 
 const projectsNames = ["Pokedex", "Message-app", "Social-network"];

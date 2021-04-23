@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   Nav,
   NavContainer,
@@ -14,26 +14,32 @@ import { useSectionRef } from "../../contexts/refContext";
 
 const sectionsNames = ["Home", "About me", "Projects", "Contact"];
 
+const handleClick = (event, refsList) => {
+  refsList[event.target.dataset.index].current.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
 const Navbar = ({ toggle }) => {
   const refs = useSectionRef();
-  const activeIndex = useNavObserver(Object.values(refs));
-  const handleClick = (event) => {
-    const refList = Object.values(refs);
-    refList[event.target.dataset.index].current.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  const refsList = useMemo(() => Object.values(refs), [refs]);
+  const activeIndex = useNavObserver(refsList);
+
   return (
     <Nav>
       <NavContainer>
-        <NavLogo to="home" smooth="easeOutQuad" duration={1000} offset={-100}>
+        <NavLogo
+          onClick={() => {
+            refsList[0].current.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           Portfolio
         </NavLogo>
         <NavMenu>
           {sectionsNames.map((sectionName, index) => (
             <NavElement key={sectionName}>
               <NavLink
-                onClick={handleClick}
+                onClick={(event) => handleClick(event, refsList)}
                 active={index === activeIndex ? true : false}
                 data-index={index}
               >

@@ -28,7 +28,7 @@ const useIntersectionObserver = (refs) => {
         refs.forEach((ref) => sectionObserver.unobserve(ref.current));
       }
     };
-  }, []);
+  }, [refs]);
 
   return activeIndex;
 };

@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { SectionContainer } from "../generalComponents/sectionContainerElement";
-import { ContactPolice, OrbitronPolice } from "../generalComponents/police";
+import { OrbitronPolice } from "../generalComponents/police";
 
 export const ContactMeSection = styled(SectionContainer)`
   display: flex;
