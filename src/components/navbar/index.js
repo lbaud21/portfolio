@@ -17,6 +17,12 @@ const sectionsNames = ["Home", "About me", "Projects", "Contact"];
 const Navbar = ({ toggle }) => {
   const refs = useSectionRef();
   const activeIndex = useNavObserver(Object.values(refs));
+  const handleClick = (event) => {
+    const refList = Object.values(refs);
+    refList[event.target.dataset.index].current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <Nav>
       <NavContainer>
@@ -26,7 +32,11 @@ const Navbar = ({ toggle }) => {
         <NavMenu>
           {sectionsNames.map((sectionName, index) => (
             <NavElement key={sectionName}>
-              <NavLink active={index === activeIndex ? true : false}>
+              <NavLink
+                onClick={handleClick}
+                active={index === activeIndex ? true : false}
+                data-index={index}
+              >
                 {sectionName}
               </NavLink>
             </NavElement>
